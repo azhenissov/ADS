@@ -2,12 +2,17 @@ import java.util.Scanner;
 
 public class Task7 {
     public static void main(String[] args) {
+        double startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
         printReverse(n, sc);
 
         sc.close();
+
+        double endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1000000000.0;
+        System.out.println("Time taken: " + duration + " seconds");
     }
 
     /**
